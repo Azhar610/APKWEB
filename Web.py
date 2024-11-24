@@ -102,23 +102,17 @@ def halaman_utama():
         st.write(f"Predicted Class: **{predicted_class}**")
         st.write(f"Confidence: **{confidence:.2f}%**")
 
-def halaman_profil():
-    st.title("Halaman Data")
-    st.write("Di sini Anda dapat mengelola data.")
-
 def halaman_github():
     st.title("Link Github")
-    st.write("Ini adalah halaman tentang aplikasi Anda.")
+    st.write("https://github.com/Azhar610/APKWEB")
 
 # Navigasi halaman melalui sidebar
 def main():
     st.sidebar.title("Navigasi")
-    pilihan = st.sidebar.radio("Pilih Halaman", ("Prediksi Gambar", "Profil", "Github"))
+    pilihan = st.sidebar.radio("Pilih Halaman", ("Prediksi Gambar", "Github"))
 
     if pilihan == "Prediksi Gambar":
         halaman_utama()
-    elif pilihan == "Profil":
-        halaman_profil()
     elif pilihan == "Github":
         halaman_github()
 
